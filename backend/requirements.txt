@@ -1,0 +1,20 @@
+# Core
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Rate limiting (CLAUDE.md: throttle forms/login) — slowapi
+slowapi==0.1.9
+
+# DB (Postgres) — wire up when the listing schema lands
+sqlalchemy==2.0.36
+psycopg[binary]==3.2.3
+alembic==1.14.0
+
+# Error monitoring (CLAUDE.md)
+sentry-sdk[fastapi]==2.19.2
+
+# Dev / test
+pytest==8.3.4
+httpx==0.28.1
