@@ -18,6 +18,7 @@ class Settings(BaseSettings):
     # CORS: comma-separated allowed origins. Never "*". See CLAUDE.md.
     cors_origins: str = "http://localhost:3000"
 
+    # Tortoise ORM URL form, e.g. postgres://user:password@host:5432/dbname
     database_url: str = ""
     sentry_dsn: str = ""
 

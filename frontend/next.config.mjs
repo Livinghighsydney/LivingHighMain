@@ -18,6 +18,12 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
 
+  // Legacy WordPress served every path WITH a trailing slash and 301'd the
+  // non-slash version to it (WP canonical redirect). Reproduce that exactly so
+  // URLs are identical, not just similar (SEO/Ads non-negotiable). Confirmed
+  // against the live .htaccess: no other rewrite/redirect rules to carry over.
+  trailingSlash: true,
+
   images: {
     // Listing images migrate to Cloudinary (see CLAUDE.md migration approach).
     remotePatterns: [

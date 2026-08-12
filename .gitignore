@@ -35,9 +35,19 @@ secrets.json
 
 # ---- Migration artifacts / cold backups (keep off-repo) ----
 /backups/
+/old_db/
+/_migration/
 *.sql
+*.sql.gz
 *.zip
+*.gz
 wp-content-uploads/
+
+# Bulky, fully-regenerable WP export outputs (re-derive from the dump via
+# backend/scripts/wp_extract.py). The distilled url-map/taxonomy/summary ARE
+# committed as the reviewable migration source of truth.
+docs/wp-export/posts.json
+docs/wp-export/yoast.json
 
 # ---- Editor / OS ----
 .vscode/
